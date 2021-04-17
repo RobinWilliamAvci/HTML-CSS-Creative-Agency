@@ -204,6 +204,140 @@ section.home{
 .services .service .icon img {
     max-width: 100px;
 }
+
+/*WORK PAGE SECTION*/
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.portfolio .item {
+    position: relative; /*??????????*/
+    width: 300px;
+    height: 300px;
+    margin:5px;
+
+}
+
+.portfolio .item img{
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio .item .action{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8); /*letzer wert ist tranzparenz der farbe?*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /*Transparenz (0 = nicht sichtbar)*/
+    cursor: pointer;
+    transition: 0.5s; /*timer für hover animationen (fade in)*/
+}
+
+.portfolio .item:hover .action{/*when hover over item change syle of the link (action)*/
+    opacity: 1; /*Transparenz (1 = voll sichtbar)*/
+}
+
+.portfolio .item .action a { 
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+
+}
+
+/*CONTACT*/
+.contact{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form{
+    position: relative;
+    background: #f9f9f9;
+    width: calc(100% - 400px);
+    padding: 60px 40px 20px;
+}
+
+.contact-form form{
+    width: 100%;
+}
+.contact-form .row{
+    width: 100%;
+    display: flex;
+}
+
+.contact-form .input50{
+    width: 50%;
+    margin: 0 10px;
+}
+.contact-form .input100{
+    width: 100%;
+    margin: 0 10px;
+}
+.contact-form .row input, 
+.contact-form .row textarea {
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.2);
+    color: #000;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px 0;
+    resize: none;
+}
+
+.contact-form .row textarea{
+    height: 150px;
+    width: 100%;
+}
+
+.contact-form .row input[type='submit']{ /*in klasse contact form in klasse row ein input element mit submit type*/
+    background-color: #1b206e; /*hintergrund farbe*/
+    color: #fff; /*Schrift farbe*/
+    margin: 0; /*kein Abstand nach oben*/
+    text-transform: uppercase; /*alles Großbuchstaben*/
+    letter-spacing: 2px; /*abstand zwischen Buchstaben*/
+    font-weight: 300; /*schrift dicke*/
+    border: 0; /*????*/
+    cursor: pointer; /*wenn mit der maus drüber wird zu finger*/
+}
+
+.contact-info {
+    width: 350px;
+    background: #f9f9f9;
+    padding: 60px 40px 20px;
+}
+.contact-info .info-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    
+}
+
+.contact-info .info-box .contact-icon{
+    width: 20px;
+    margin-right: 40px;
+}
+
+
+
+
 @media(max-width:1068px){
     .home-img{
         display: none;
@@ -219,9 +353,14 @@ section.home{
     .navigation ul li a{
         font-size: 2rem;
     }
-
+    .portfolio{
+        justify-content: center;
+    }
     .services{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .services .service {
+        box-shadow: 0px 5px 10px #888;
     }
 
 }
