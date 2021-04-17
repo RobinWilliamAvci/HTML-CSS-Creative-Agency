@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/*Whole document*/
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+/*Whole document, body???*/
+html, body{
+    font-family: 'Poppins', sans-serif;
+    color:#111;
+}
+
+h1 {
+    font-size: 30;
+    font-weight: 500;
+}
+
+/*Alle (p) absätze*/
+
+p {
+    margin: 20px 0 10px;
+    font-size: 1.1rem /*1rem == html font size (standart 16px) so 1.1rem = 1.1*(not defined == 16px) = 17.6*/
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 100px;
+
+}
+
+/*###################### Classes ##########################*/
+
+/*Button*/
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    background: #f60f20;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 20px 0;
+
+}
+
+.btn:hover{
+    transform: scale(0.98);
+}
+
+/*Logo*/
+.logo{
+    position: absolute;
+    top: 30 px;
+    left: 100px;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 10;
+}
+
+/*Home Page*/
+.home-content{
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+}
+
+.home-img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 110%;
+}
+
+
+.navigation {
+    display: none;
+}
