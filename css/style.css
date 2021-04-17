@@ -84,7 +84,8 @@ section {
     z-index: 20;
     cursor: pointer;
 }
-
+/*for toggel.active class (toggle class will change to toggle active class onclick (javascript))*/
+/*background will changeto close.png and else things are the same*/
 .toggle.active{
     background: var(--primary-color) url(../images/close.png);
     background-size: 25px;
@@ -96,7 +97,7 @@ section {
 .navigation {
     position: fixed;
     top:0;
-    left: 100%;
+    left: 100%; /*means it is out of view*/
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -106,12 +107,14 @@ section {
     align-items: center;
 }
 
+/*for navigation.active class (navigation class will change to navigation active class onclick (javascript))*/
 .navigation.active {
     position: fixed;
     top:0;
-    left: 0%;
+    left: 0%; /*means we overwrite parrent class and it is in the view again*/
 }
 
+/*you can specify the object through "classname name-of-element" */ 
 .navigation ul{
     position: relative;
 }
