@@ -323,29 +323,30 @@ section.home{
     background: #f9f9f9;
     padding: 60px 40px 20px;
 }
+/**/
 .contact-info .info-box {
     display: flex;
     align-items: flex-start;
     margin-bottom: 40px;
     
 }
-
+/*größe der bilder festgelegt*/
 .contact-info .info-box .contact-icon{
     width: 20px;
     margin-right: 40px;
 }
-
+/*the headdings (Adress/Email/Call)*/
 .contact-info .info-box .details h4{
     color: #1b206e;
-    
 }
+/*the email links are black*/
 .contact-info .info-box .details a{
     color: #000;
 
 }
 
 
-
+/*Change Styles for Mobile devices (1068 for ipad and Tablets)*/
 @media(max-width:1068px){
     .home-img{
         display: none;
@@ -391,6 +392,7 @@ section.home{
         padding: 30px 30px 20px;
     }
 }
+/*Change Styles for Mobile devices (768 for iphone and Smartphones)*/
 @media(max-width:768px){
     .services{
         grid-template-columns: repeat(1, 1fr);
